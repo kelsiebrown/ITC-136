@@ -8,7 +8,7 @@ users=$( who )
 echo -en "
 
 
-         \e[7mThis is a snapshot of your current system:
+         \e[7mThis is a snapshot of your current system:\e[0m
 
 
           \e[34mDisk Used: \e[94m$diskused
@@ -18,7 +18,7 @@ echo -en "
           \e[96mLogged In Users: \e[96m$users
           
           \e[32mOpen Internet Connections: \e[92m$connections 
-          
+          \e[0m
           
 "
 
