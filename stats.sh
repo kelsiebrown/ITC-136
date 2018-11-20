@@ -8,13 +8,13 @@ users=$( who )
 echo -en "This is a snapshot of your current system:
 
 
-          \e[34mDisk Used: $diskused
+          \e[34mDisk Used: \e[94m$diskused
           
-          \e[35mFree Memory: $memfree
+          \e[35mFree Memory: \e[95m$memfree
           
-          \e[96mLogged In Users: $users
+          \e[96mLogged In Users: \e[96m$users
           
-          \e[32mOpen Internet Connections: $connections 
+          \e[32mOpen Internet Connections: \e[92m$connections 
           
 "
 
