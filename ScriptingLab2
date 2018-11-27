@@ -3,4 +3,15 @@
 echo "Hi! This program will walk you through setting up your GitHub repository."
 echo "Please enter your GitHub username: "
 read username
-echo "Hi $username!"
+
+echo "Please enter your email address: "
+read email
+
+echo "Enter the name of the repository to be cloned: "
+read reponame
+
+git clone https://github.com/$username/$reponame
+
+git config --global user.name $username
+git config --global user.email $email
+
