@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo "Hi! This program will walk you through setting up your GitHub repository."
+echo "Please enter your GitHub username: "
+read username
+echo "Hi $username!"
