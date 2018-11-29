@@ -7,11 +7,16 @@ read username
 echo "Please enter your email address: "
 read email
 
-echo "Enter the name of the repository to be cloned: "
-read reponame
+echo "Enter the URL of the repository to be cloned: "
+read url
 
-git clone https://github.com/$username/$reponame
+# source: https://serverfault.com/questions/417241/extract-repository-name-from-github-url-in-bash
+basename=$(basename $repoURL)
+repoName=${basename%.*}
 
-git config --global user.name $username
-git config --global user.email $email
+cd $repoName/
 
+git config --local user.name $username
+git config --local user.email $email
+
+echo "Your GitHub repository has been set up."
