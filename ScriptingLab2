@@ -11,10 +11,10 @@ echo "Enter the URL of the repository to be cloned: "
 read url
 
 # source: https://serverfault.com/questions/417241/extract-repository-name-from-github-url-in-bash
-basename=$(basename $repoURL)
-repoName=${basename%.*}
+basename=$(basename $url)
+reponame=${basename%.*}
 
-cd $repoName/
+cd $reponame/
 
 git config --local user.name $username
 git config --local user.email $email
